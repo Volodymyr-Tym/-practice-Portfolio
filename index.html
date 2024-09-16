@@ -2,127 +2,309 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/-practice-Portfolio/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/-practice-Portfolio/assets/favicon-CizN7xer.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portfolio</title>
     <script type="module" crossorigin src="/-practice-Portfolio/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/-practice-Portfolio/assets/styles-DvPDDfy5.css">
+    <link rel="modulepreload" crossorigin href="/-practice-Portfolio/assets/vendor-CzHQCRpZ.js">
+    <link rel="stylesheet" crossorigin href="/-practice-Portfolio/assets/vendor-CRd9Pp_G.css">
+    <link rel="stylesheet" crossorigin href="/-practice-Portfolio/assets/index-C_RaJdFu.css">
   </head>
+
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/-practice-Portfolio/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+    <!-- =============================================
+!            HEADER
+============================================ -->
+<header class="header js-header">
+  <div class="container header-container">
+    <nav class="header-nav">
+      <a class="logo-link" href="./index.html">
+        <img
+          class="header-logo"
+          srcset="data:image/png;base64,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 1x, /-practice-Portfolio/assets/logo@2x-hPPCgiIQ.png 2x"
+          src="data:image/png;base64,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"
+          alt="Jefferson"
+          width="80"
+          height="80"
+        />
+        jefferson*
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
+
+      <a class="logo-link-fixed" href="./index.html">
+        <img
+          class="header-logo-fixed"
+          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAdVBMVEUAAAAbHSAbHSAcHSAcHSAcHSAaHSAcHCAcHSAbHCAdHSAbHCAcHiAYICAQECAcHSD6+vpvcHJTVFaLi42np6hGRknCw8O1tbY4OTsqKy7s7Ox9fn83OTump6jQ0NGZmZqLjI19fX/e3t5iYmQ4OTyKi41hYmPrtwAkAAAAD3RSTlMA31+v74BQz7CQj3BvEBADq4CJAAABQ0lEQVRIx+WW2W6DMBBFzRLSrHNtsI1Zsrf//4kdlzZEDUrth0qRcnhg0RyuZgSyxRfbdZbQQ+ZZKkaKnAJIrsqSApkN9TMKZimYlCIoWEhihHzLAVGsRBYnvIkkTkgERfLaQglJI51pcKC2wY4Yd5kQKrQ0YrCzSqKpSmIU6nuBNN0AX1LhSMxBalDb/hY61fl3San9NaCUMnjnh66ChWnKqR6cAWO7Cld8HeuNnmy6x77WJYweEiz2qibXw/LRTwgadmhYE+DnMAxurxScPE4ILaxkLOSNME7pXigxcCuMTCb85AYKCoaYswoVyKDXlwNOdajgKjAnHZxApKVUjs/S3yhZPxB6fER93lWDOkrA7vx0v+hLCQlFMY9fUFZxQio2edwCJEQRF8AsiP5rK7AQ36RBs80LMZJm8z+6zdYb4fkEzdiGl4rs0OUAAAAASUVORK5CYII= 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAh1BMVEUAAAAcHSAUGCAbHSAcHCAcHSAcHSAbHSAcHCAYHCAcHCAbHCAdHSAdHSAcHCAbHSAcHiAcHSD6+vqnp6hvb3Le3t/Cw8NTVFfe3t44OTvs7OwqKy6Li419fn9TVFaZmZo3OTvQ0NFFRklhYmSLjI21tbW0tbXQ0NC1tba0tLWKi42Li4xiYmTq9LmpAAAAEXRSTlMA7xDfz6+gcEAggJCP379ff2WKNyYAAAK7SURBVGje7ZnpsqIwEEbDoqjXZToECIRVvc76/s83WRTUiwOO6ampW5w/tpb1HdIdUqWQWxbBzHPgr3H82WpBHuJ+ccAC3nzZH78Ga/QpAgcs4u3IHWuwzPq2PVuwju+SDh8Q2H7sD1aXdoBEQDRLD5BwzBjmgMZaLwAQcfUCEFlJgQeIOIQsAJUFWQEqAZkBKjPiAyoecQAVhwAyk2ASTILPKciz6ACPqCtOaRanskxCWTanpwUHKhME9FNkVCMFlam+du4kEWMEhQnoJaGGGCCnhgIM+pNyjEBwFdBPLBN5UR5kUKY8rGTptSAdNYO0YNCLSd23a+Gim0ytl56q8pVdpMbTNesdLoQ0YsAoFeJIKXtNEHWCEM7suXr3g9IkksX3wW2a5wcwJNWJN3GV6NkwxtQKmOanHoFE6K4yTs/E5WCL2murY3omqmUI7aGbK+Nt/FjBPqMtGRsQiGOmr4SNF9Sqn3FRlowrQy3CMFRFqNEbVhXiKt4oxgq+ydcjaHKl+sOQaxVfqW3KzTeHBXcJ6nrLxwIIaVMCU/0qOGXjBKG5pwxMnwmPBSKHy42Wjm1RI9vdBejbql/Qf1QMC9Q84xZ9bA4LymcE90RDApGmAlFgeE4QwQ2WBZGcAaqgUlsfU1Be35O/mlNeWxZA3EaYY+lgW5BmKq5IkkOlqhhsC2DPaQdP7QsgDdv8SgCCQCryuOFNWAgwcM5jU+1lWb0isEa/4P1SYwj2quVgQBAkTO15pmsUAVVwU6MJeGpqJAHPBTzJ//YTahJMgkkwCf69AP+vZQ9Q8fH/3g8AlRX+IxbcKW8IwX2IM5cCFxBZEskboDEnChdtCpsl0QSAxI5IEJv0Rlq2gIBPOlwfrLN1yTVvgNcfw24DFnEC8oHl3OLlq/b0Kayswlm55CGL1cx3Xsj2ZsGC3PAbk0ZZU4XsbJoAAAAASUVORK5CYII= 2x"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAdVBMVEUAAAAbHSAbHSAcHSAcHSAcHSAaHSAcHCAcHSAbHCAdHSAbHCAcHiAYICAQECAcHSD6+vpvcHJTVFaLi42np6hGRknCw8O1tbY4OTsqKy7s7Ox9fn83OTump6jQ0NGZmZqLjI19fX/e3t5iYmQ4OTyKi41hYmPrtwAkAAAAD3RSTlMA31+v74BQz7CQj3BvEBADq4CJAAABQ0lEQVRIx+WW2W6DMBBFzRLSrHNtsI1Zsrf//4kdlzZEDUrth0qRcnhg0RyuZgSyxRfbdZbQQ+ZZKkaKnAJIrsqSApkN9TMKZimYlCIoWEhihHzLAVGsRBYnvIkkTkgERfLaQglJI51pcKC2wY4Yd5kQKrQ0YrCzSqKpSmIU6nuBNN0AX1LhSMxBalDb/hY61fl3San9NaCUMnjnh66ChWnKqR6cAWO7Cld8HeuNnmy6x77WJYweEiz2qibXw/LRTwgadmhYE+DnMAxurxScPE4ILaxkLOSNME7pXigxcCuMTCb85AYKCoaYswoVyKDXlwNOdajgKjAnHZxApKVUjs/S3yhZPxB6fER93lWDOkrA7vx0v+hLCQlFMY9fUFZxQio2edwCJEQRF8AsiP5rK7AQ36RBs80LMZJm8z+6zdYb4fkEzdiGl4rs0OUAAAAASUVORK5CYII="
+          alt="Jefferson"
+          width="48"
+          height="48"
+        />
+      </a>
+
+      <div class="nav-menu js-nav-menu">
+        <p class="nav-menu-title">Menu</p>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-list-item">
+            <a class="nav-menu-link" href="#about-me">About me</a>
+          </li>
+
+          <li class="nav-menu-list-item">
+            <a class="nav-menu-link" href="#benefits">Benefits </a>
+          </li>
+
+          <li class="nav-menu-list-item">
+            <a class="nav-menu-link" href="#projects">Projects</a>
+          </li>
+
+          <li class="nav-menu-list-item">
+            <a class="nav-menu-link" href="#faq"> FAQ</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#order-project" class="go-order-project-link"
+        >Order the project</a
+      >
     </nav>
+
+    <button class="burger-menu-btn js-burger-menu" type="button">
+      <svg class="burger-menu-icon">
+        <use href="/-practice-Portfolio/assets/icons-C3bdFleM.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+  </div>
+
+  <!-- =============================================
+!            MOBILE MENU
+============================================ -->
+  <div class="mobile-menu-backdrop js-mobile-menu">
+    <div class="mobile-menu container" id="mobile-menu">
+      <button
+        class="close-mobile-menu-btn js-close-mobile-menu-btn"
+        type="button"
+      >
+        <svg class="close-mobile-menu-icon">
+          <use href="/-practice-Portfolio/assets/icons-C3bdFleM.svg#icon-icon-cross"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-menu-nav">
+        <ul class="mobile-nav-menu-list js-mobile-nav-menu-list">
+          <li class="mobile-nav-menu-list-item">
+            <a class="mobile-nav-menu-link" href="#about-me">About me</a>
+          </li>
+
+          <li class="mobile-nav-menu-list-item">
+            <a class="mobile-nav-menu-link" href="#benefits">Benefits </a>
+          </li>
+
+          <li class="mobile-nav-menu-list-item">
+            <a class="mobile-nav-menu-link" href="#projects">Projects</a>
+          </li>
+
+          <li class="mobile-nav-menu-list-item">
+            <a class="mobile-nav-menu-link" href="#faq"> FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#order-project" class="go-order-project-link"
+        >Order the project</a
+      >
+    </div>
   </div>
 </header>
 
-
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/-practice-Portfolio/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
+      
+      
+      
+      <section class="projects-section section-paddings" id="projects">
+  <div class="project-container container">
+    <h2 class="projects-title">Projects</h2>
+
+    <div class="swiper" id="projects-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide projects-slide-wrap">
+          <div class="slide-info-wrap">
+            <ul class="tags-list">
+              <li class="tags-list-item">#react</li>
+
+              <li class="tags-list-item">#js</li>
+
+              <li class="tags-list-item">#node js</li>
+
+              <li class="tags-list-item">#git</li>
+            </ul>
+
+            <h3 class="projects-subtitle">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+
+            <a
+              href="https://github.com/LazyStudent23/BraveCoders"
+              class="see-project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See project</a
+            >
+          </div>
+
+          <div class="slide-img-wrap">
+            <picture>
+              <source
+                srcset="/-practice-Portfolio/assets/projects1--kIxrC0Y.jpg 1x, /-practice-Portfolio/assets/projects1@2x-D_63PazX.jpg 2x"
+                media="(min-width: 768px)"
+                width="614"
+                height="385"
+              />
+
+              <source
+                srcset="/-practice-Portfolio/assets/projects-mobile-1-D2NFAIqA.jpg 1x, /-practice-Portfolio/assets/projects-mobile-1@2x-CYT5af35.jpg 2x"
+                media="(max-width: 767px)"
+              />
+
+              <img
+                class="projects-img"
+                src="/-practice-Portfolio/assets/projects-mobile-1-D2NFAIqA.jpg"
+                alt="Read journey project image."
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div class="swiper-slide projects-slide-wrap">
+          <div class="slide-info-wrap">
+            <ul class="tags-list">
+              <li class="tags-list-item">#react</li>
+
+              <li class="tags-list-item">#js</li>
+
+              <li class="tags-list-item">#node js</li>
+
+              <li class="tags-list-item">#git</li>
+            </ul>
+
+            <h3 class="projects-subtitle">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+
+            <a
+              href=""
+              class="see-project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See project</a
+            >
+          </div>
+
+          <div class="slide-img-wrap">
+            <picture>
+              <source
+                srcset="/-practice-Portfolio/assets/projects2-CrhDqkQQ.jpg 1x, /-practice-Portfolio/assets/projects2@2x-D-11kDrl.jpg 2x"
+                media="(min-width: 768px)"
+                width="614"
+                height="385"
+              />
+
+              <source
+                srcset="/-practice-Portfolio/assets/projects-mobile-2-C1HkQvOk.jpg 1x, /-practice-Portfolio/assets/projects-mobile-2@2x-B5xWtdrT.jpg 2x"
+                media="(max-width: 767px)"
+              />
+
+              <img
+                class="projects-img"
+                src="/-practice-Portfolio/assets/projects-mobile-2-C1HkQvOk.jpg"
+                alt="Read journey project image."
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div class="swiper-slide projects-slide-wrap">
+          <div class="slide-info-wrap">
+            <ul class="tags-list">
+              <li class="tags-list-item">#react</li>
+
+              <li class="tags-list-item">#js</li>
+
+              <li class="tags-list-item">#node js</li>
+
+              <li class="tags-list-item">#git</li>
+            </ul>
+
+            <h3 class="projects-subtitle">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+
+            <a
+              href=""
+              class="see-project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See project</a
+            >
+          </div>
+
+          <div class="slide-img-wrap">
+            <picture>
+              <source
+                srcset="/-practice-Portfolio/assets/projects3-BBuJIhpW.jpg 1x, /-practice-Portfolio/assets/projects3@2x-Dgu3MbMx.jpg 2x"
+                media="(min-width: 768px)"
+                width="614"
+                height="385"
+              />
+
+              <source
+                srcset="/-practice-Portfolio/assets/projects-mobile-3-CcDreXMM.jpg 1x, /-practice-Portfolio/assets/projects-mobile-3@2x-sc6uWUGz.jpg 2x"
+                media="(max-width: 767px)"
+              />
+
+              <img
+                class="projects-img"
+                src="/-practice-Portfolio/assets/projects-mobile-3-CcDreXMM.jpg"
+                alt="Read journey project image."
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-nav-wrap">
+        <div class="swiper-button-prev slide-btns">
+          <svg class="slide-btn-icon">
+            <use href="/-practice-Portfolio/assets/icons-C3bdFleM.svg#icon-arrow-left"></use>
+          </svg>
+        </div>
+
+        <div class="swiper-button-next slide-btns">
+          <svg class="slide-btn-icon">
+            <use href="/-practice-Portfolio/assets/icons-C3bdFleM.svg#icon-arrow-right"></use>
+          </svg>
+        </div>
+      </div>
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
   </div>
 </section>
 
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
-
+      
+      
+      
     </main>
 
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
-  </div>
-</footer>
-
+    
 
   </body>
 </html>
