@@ -81,12 +81,13 @@ html {
   border: none;
   stroke: #fafafa;
 
-  transition: transform 250ms linear, stroke 250ms linear;
+  transition: all 250ms linear;
 }
 .burger-menu-btn:hover,
 .burger-menu-btn:focus {
   transform: scale(1.15);
   stroke: #ff7f08;
+  filter: drop-shadow(0px 0px 5px #ff7f08);
 }
 
 .burger-menu-icon {
@@ -108,21 +109,23 @@ html {
 
   .header-nav .nav-menu {
     display: block;
-    max-height: 39px;
     text-align: center;
+    max-height: 20px;
+    z-index: 99;
   }
 
   .nav-menu-title {
-    padding: 10px;
-    margin-bottom: 8px;
+    border-radius: 12px;
+    margin-bottom: 18px;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     cursor: pointer;
 
-    transition: color 250ms linear;
+    transition: all 250ms linear;
   }
   .nav-menu-title:hover {
-    color: #ff7f08;
+    background-color: rgba(255, 127, 8, 0.3);
+    box-shadow: 0px 0px 12px 4px #ff7f08;
   }
 
   .nav-menu-list {
@@ -132,7 +135,7 @@ html {
 
     opacity: 0;
     visibility: hidden;
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: all 250ms linear;
   }
   .nav-menu-list.is-visible {
     opacity: 1;
@@ -141,11 +144,14 @@ html {
 
   .nav-menu-link {
     color: #fafafa;
-    transition: color 250ms linear;
+    transition: all 250ms linear;
   }
   .nav-menu-link:hover,
   .nav-menu-link:focus {
-    color: #ff7f08;
+    background-color: rgba(255, 127, 8, 0.3);
+    border-radius: 12px;
+    padding: 0px 8px;
+    box-shadow: 0px 0px 12px 4px #ff7f08;
   }
 
   .header-nav .go-order-project-link {
@@ -210,14 +216,16 @@ html {
   padding: 0;
   background-color: transparent;
   border: none;
+  border-radius: 50%;
   stroke: #fafafa;
 
-  transition: transform 250ms linear, stroke 250ms linear;
+  transition: all 250ms linear;
 }
 .close-mobile-menu-btn:hover,
 .close-mobile-menu-btn:focus {
   transform: scale(1.15);
   stroke: #ff7f08;
+  filter: drop-shadow(0px 0px 5px #ff7f08);
 }
 
 .close-mobile-menu-icon {
@@ -236,11 +244,14 @@ html {
   text-decoration: underline;
   text-decoration-skip-ink: none;
 
-  transition: color 250ms linear;
+  transition: all 250ms linear;
 }
 .mobile-nav-menu-link:hover,
 .mobile-nav-menu-link:focus {
-  color: #ff7f08;
+  background-color: rgba(255, 127, 8, 0.3);
+  border-radius: 12px;
+  padding: 0px 8px;
+  box-shadow: 0px 0px 12px 4px #ff7f08;
 }
 
 .go-order-project-link {
@@ -254,5 +265,7 @@ html {
 }
 .go-order-project-link:hover,
 .go-order-project-link:focus {
-  background-color: #e88222;
+  background-color: rgba(255, 127, 8, 0.3);
+  color: #fafafa;
+  box-shadow: inset 0px 0px 12px 4px #ff7f08;
 }
