@@ -171,22 +171,27 @@
   transition: background-color 250ms linear, border 250ms linear;
 }
 
+.swiper-button-next:after{
+  content: '';
+}
+
 #about-me .swiper-button-next {
-  border: none;
-  stroke: #3b3b3b;
-  fill: transparent;
-  cursor: pointer;
-  transition: all 250ms linear;
+    position: static;
+    display: block;
+    z-index: 1;
+    margin: 0;
+    border: none;
+    width: 28px;
+    height: 28px;
+    stroke: #3b3b3b;
+    fill: transparent;
+    cursor: pointer;
+    transition: all .25s linear;
 }
 #about-me .swiper-button-next:hover {
   transform: scale(1.15);
   stroke: #ff7f08;
   filter: drop-shadow(0px 0px 5px #ff7f08);
-}
-
-.skills-swiper-btn-next-icon {
-  width: 28px;
-  height: 28px;
 }
 
 @media screen and (min-width: 768px) {
@@ -235,10 +240,9 @@
     height: 200px;
   }
 
-  .skills-swiper-btn-next-icon {
+  #about-me .swiper-button-next {
     width: 40px;
     height: 40px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
